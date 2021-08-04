@@ -2,7 +2,7 @@
 let BeerSong = require('./beer-song.js');
 
 describe("Beer Song", () => {
-  xtest("first verse", () => {
+  test("first verse", () => {
     let expected = "99 bottles of beer on the wall, 99 bottles of beer.\n" +
                    "Take one down and pass it around, 98 bottles of beer " +
                    "on the wall.\n";
@@ -10,7 +10,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verse(99)).toBe(expected);
   });
 
-  xtest("another verse", () => {
+  test("another verse", () => {
     let expected = "3 bottles of beer on the wall, 3 bottles of beer.\n" +
                    "Take one down and pass it around, 2 bottles of beer " +
                    "on the wall.\n";
@@ -18,7 +18,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verse(3)).toBe(expected);
   });
 
-  xtest("2 bottles verse", () => {
+  test("2 bottles verse", () => {
     let expected = "2 bottles of beer on the wall, 2 bottles of beer.\n" +
                    "Take one down and pass it around, 1 bottle of beer " +
                    "on the wall.\n";
@@ -26,7 +26,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verse(2)).toBe(expected);
   });
 
-  xtest("1 bottle verse", () => {
+  test("1 bottle verse", () => {
     let expected = "1 bottle of beer on the wall, 1 bottle of beer.\n" +
                    "Take it down and pass it around, no more bottles " +
                    "of beer on the wall.\n";
@@ -34,7 +34,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verse(1)).toBe(expected);
   });
 
-  xtest("no bottles verse", () => {
+  test("no bottles verse", () => {
     let expected = "No more bottles of beer on the wall, no more " +
                    "bottles of beer.\nGo to the store and buy some " +
                    "more, 99 bottles of beer on the wall.\n";
@@ -42,7 +42,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verse(0)).toBe(expected);
   });
 
-  xtest("a couple of verses", () => {
+  test("a couple of verses", () => {
     let expected = "99 bottles of beer on the wall, 99 bottles of beer.\n" +
                    "Take one down and pass it around, 98 bottles of beer " +
                    "on the wall.\n\n98 bottles of beer on the wall, " +
@@ -65,7 +65,7 @@ describe("Beer Song", () => {
     expect(BeerSong.verses(2, 0)).toBe(expected);
   });
 
-  xtest("the whole song", () => {
+  test("the whole song", () => {
     let expected = wholeSong();
     expect(BeerSong.lyrics()).toBe(expected);
   });
